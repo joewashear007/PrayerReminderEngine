@@ -1,0 +1,12 @@
+[04-Nov-2013 20:33:13 America/Denver] PHP Warning:  imap_open(): Couldn't open stream {host155.hostmonster.com :465}INBOX in /home2/jjprogra/public_html/pray/ReadMail.php on line 5
+[04-Nov-2013 20:33:13 America/Denver] PHP Notice:  Unknown: No such host as host155.hostmonster.com  (errflg=2) in Unknown on line 0
+[04-Nov-2013 20:34:25 America/Denver] PHP Warning:  imap_open(): Couldn't open stream {host155.hostmonster.com:465}INBOX in /home2/jjprogra/public_html/pray/ReadMail.php on line 5
+[04-Nov-2013 20:34:25 America/Denver] PHP Notice:  Unknown: Connection failed to host155.hostmonster.com,465: Connection timed out (errflg=2) in Unknown on line 0
+[04-Nov-2013 20:35:30 America/Denver] PHP Warning:  imap_open(): Couldn't open stream {host155.hostmonster.com:465} in /home2/jjprogra/public_html/pray/ReadMail.php on line 5
+[04-Nov-2013 20:35:30 America/Denver] PHP Notice:  Unknown: Connection failed to host155.hostmonster.com,465: Connection timed out (errflg=2) in Unknown on line 0
+[04-Nov-2013 20:41:11] PHP Warning:  file_put_contents(/public_html/pray/the.txt) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory in /home2/jjprogra/public_html/pray/procmail.php on line 6
+[04-Nov-2013 20:41:35] PHP Warning:  file_put_contents(/public_html/pray/the.txt) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory in /home2/jjprogra/public_html/pray/procmail.php on line 7
+[04-Nov-2013 20:48:46 America/Denver] PHP Warning:  imap_open(): Couldn't open stream {host155.hostmonster.com:993} in /home2/jjprogra/public_html/pray/ReadMail.php on line 5
+[04-Nov-2013 20:48:46 America/Denver] PHP Notice:  Unknown: Connection failed to host155.hostmonster.com,993: Connection timed out (errflg=2) in Unknown on line 0
+[04-Nov-2013 20:49:24 America/Denver] PHP Warning:  imap_open(): Couldn't open stream {host155.hostmonster.com:993} in /home2/jjprogra/public_html/pray/ReadMail.php on line 5
+[04-Nov-2013 20:49:24 America/Denver] PHP Notice:  Unknown: Connection failed to host155.hostmonster.com,993: Connection timed out (errflg=2) in Unknown on line 0

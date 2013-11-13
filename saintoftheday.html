@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Universalis JSONP example</title>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+	var urlAPI = "http://www.universalis.com/Europe.England/jsonpmass.js?callback=?";
+	$.ajax({
+		type: 'GET',
+		url: urlAPI,
+		async: false,
+		jsonpCallback: 'universalisCallback',
+		contentType: "application/json",
+		dataType: 'jsonp',
+		success: function(json) {
+		   $("#DateString").html(json.date);
+		   $("#DayDescription").html(json.day);
+		   $("#Copyright").html(json.copyright);
+		},
+		error: function(e) {
+		   console.log(e.message);
+		}
+	});
+	$("button").click(function () {
+		var feastday = $("#DayDescription").text();
+		
+		var request = $.ajax({
+			url: "insertFeastDay.php",
+			type: "GET",
+			data: {feast : feastday}
+		});
+		request.done(function(msg) {
+			alert( msg );
+		});
+		request.fail(function(jqXHR, textStatus) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+});
+
+
+	
+
+</script>
+<script src="http://www.universalis.com/Europe.England/jsonpmass.js?callback=universalisCallback" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+
+<h3>Date</h3>
+<p id="DateString"></p>
+
+<h3>Today's feast</h3>
+<p id="DayDescription"></p>
+
+<h3>Copyright notice</h3>
+<p id="Copyright"></p>
+
+<p id=jq></p>
+
+<button>send to server</button>
+</body>
+</html>
